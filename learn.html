@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>HTML5 lesson</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Learn HTML5">
+        <style>
+            td{border: 1px solid burlywood;}
+            .blueColor {
+                color:rgb(138, 138, 207);
+                font: size 22px;
+                font-weight:bold;
+                }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- 
+            https://developer.mozilla.org/es/docs/Learn 
+        -->
+        <div id="mainBox" class="cat">
+            <h1 lang-"en" id="title">HTML5 Crash Course for a JavaScript Developer Tutorial </h1>
+            <p>smaller <br id="line"> text</p>
+            <p><b>smaller</b> <i>text</i></p>
+            <p><strong>smaller</strong> <em>text</em></p>
+        </div>
+
+        <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coffee</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td>3.5</td>
+                </tr>
+                <tr>
+                    <td>Sugar</td>
+                    <td>0.5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Some more text goes here</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <h2>Lists</h2>
+        <ul>
+            <li style="color: rgb(90, 245, 90)">Item 1</li>
+            <li class="blueColor">Item 2
+                        <ul>
+                            <li>Another 1</li>
+                            <li>Another 2</li>
+                            <li>Another 3</li>
+                        </ul>
+            </li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+        <div>-----------------------------------------</div>
+        <h4>Class</h4><br>
+        <p>document.getElementsByTagName("li")[0].classList</p>
+        <p>document.getElementsByTagName("li")[0].classList.add("blueColor")</p>
+        <p>document.getElementsByTagName("li")[0].classList.remove("blueColor")</p>
+        
+        
+        
+        <div>-----------------------------------------</div>
+
+
+
+        <div>
+            <label>Your Name</label><input type="text" id="yn" placeholder="enter your name..."><br>
+        </div>
+        <section class="cat">
+            <label>Your email</label><input type="email">
+            <div>
+                <p>More information</p>
+            </div>
+        </section>
+        <div>
+            <label>Options</label>
+            <select id="dropdown">
+                <option value="a1">Option A</option>
+                <option value="b2">Option B</option>
+                <option value="c4">Option C</option>
+            </select>
+        </div>
+        <div>
+            <label>Radio group</label><br>
+            <h3>Are you joining us?</h3>
+            <label for="yes">Yes
+                <input id="yes" type="radio" name="answer" value="y">
+            </label>
+            <label for="no">No</label>
+            <input id="no" type="radio" name="answer" value="n">
+            <label>Maybe</label>
+            <input type="radio" name="answer">            
+        </div>
+        <br>
+        <p>document.querySelector('input[name="answer"]:checked')
+            '<'input id=​"yes" type=​"radio" name=​"answer" value=​"y'>'</p>
+        <div>
+            <label>Do you agree?</label>
+            <input type="checkbox" id="terms">
+        </div>
+
+        <div>
+            <textarea name="" id="area" cols="30" rows="10"></textarea>
+        </div>
+
+        <p lang="en">another <b>text</b></p>
+        <a href="https://www.google.com" target="_blank">click here</a>
+        <h2>Other tags</h2>
+        <div class="cat">
+            <label>Your Name</label><input type="text" name="yn"><br>
+            document.getElementsByName("yn"); <br><br>
+            <p>
+                >document.getElementById("yn") <br>
+                '<'input type="text" id="yn"'>' <br>
+                >document.getElementById("yn").type <br>                
+                "text" <br>
+                document.getElementById("yn").type = "color" <br>                
+            </p>
+        </div>
+        <h2>Smaller <i>text</i></h2>
+        <h3>Smaller</h3>
+        <h4 class="cat">Smaller</h4>
+        <h5>Smaller</h5>
+        <h6>smaller</h6>
+        <img src="./img/icons8_launch_48.png">
+    </body>
+
+</html>
+
+<!-- direct child
+>document.querySelectorAll(".cat>p"); -->
+<!-- related element
+document.querySelectorAll(".cat div p"); -->
